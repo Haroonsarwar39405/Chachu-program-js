@@ -1,0 +1,793 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+<script>
+    // write a program that input 2 numbers and print addition of that numbers.
+
+    var first = +prompt(`enter first value`)
+    var second = +prompt(`enter second value`)
+
+    console.log(`${first + second},${first - second},${first * second},${first / second},${first % second}`)
+    // write a program that input a product and price of that product and, print 20% discount on that product
+    var product = prompt(`write the product name`)
+    var price = prompt(`write the price of product`)
+    console.log(`discount on product =${price / 100 * 20}`)
+    // write a program that enter 1st name and last name of user, and print 1st name and last name in combined form.
+    var first_name = prompt(`write the first name`)
+    var last_name = prompt(`write the last name`)
+    console.log(`${first_name + last_name}`)
+    // write a program that input 5 numbers from user and print multiplication of that numbers by using alert method.
+    var first_no = prompt(`write first number`)
+    var second_no = prompt(`write second number`)
+    var thired_no = prompt(`write thired number`)
+    var fourth_no = prompt(`write fourth number`)
+    var fifth_no = prompt(`write fifth number`)
+    alert(`${first_no * second_no * thired_no * fourth_no * fifth_no}`)
+    // user prompt a number and tell either the number is even or odd
+    var number = +prompt("write a number")
+    if (number % 2 == 0) { alert("even number") }
+    else { alert("odd number") }
+    // prompt number tels either it is positive number or negetive number
+    var number = +prompt("write a number")
+    if (number >= 0) { alert("positive number") }
+    else { alert("negtive number") }
+    // write a program that input price of a product.if price of product is greater than 50k than it offer 20% discount on that product.
+    var price = +prompt(`write a price of product`)
+
+    if (price >= 50000) {
+        var dis_price = price / 100 * 20
+        var new_price = price - dis_price
+        alert(`then discount is=${dis_price} and dic price=${new_price}`)
+    }
+    else {
+        alert("no dic")
+    }
+    // Write a program that inputs a charctar and checks whether it is vowel or consonant.
+    var chr = prompt(`write a chartar`)
+    if (chr == `a` || chr == `e` || chr == `i` || chr == `o`
+        || chr == `u` || chr == `A` || chr == `E` || chr == `I` || chr == `O` || chr == `U`) { alert(`this is vowl`) }
+
+    else { alert(`this is consant`) }
+    // Write a program that inputs a year and checks whether it is leap or not.
+    var year = +prompt(`write a year`)
+    if (year % 4 == 0) { alert(`this is leap year`) }
+    else { alert(`not a leap year`) }
+    // Write a program that inputs five numbers and find the greatest number.
+    var a = +prompt("enter first number")
+    var b = +prompt("enter second number")
+    var c = +prompt("enter third number")
+    var d = +prompt("enter fourth number")
+    var e = +prompt("enter fifth number")
+    if (a > b && a > c && a > d && a > e) { alert(`${a} is greater number`) }
+    if (b > a && b > c && b > d && b > e) { alert(`${b} is greater number`) }
+    if (c > a && c > b && c > d && c > e) { alert(`${c} is greater number`) }
+    if (d > a && d > b && d > c && d > e) { alert(`${d} is greater number`) }
+    if (e > a && e > b && e > c && e > d) { alert(`${e} is greater number`) }
+    // Write a program that contain  an if statement that may be used to compute the area of a square (area = side * side) or a 
+    //  triangle (area = 1/2 * base * height) after prompting the user to type the first character of the figure name (S or T).
+    var char = prompt(`write a character`)
+    if (char == `S`) {
+        var side = +prompt(`put a side `)
+        var squareAns = side * side
+        alert(`area of square=${squareAns}`)
+    }
+    if (char == `T`) {
+        var height = +prompt(`put the height`)
+        var base = +prompt(`put the base`)
+        var ans = 1 / 2 * base * height
+        alert(`area of triangle=${ans}`)
+    }
+    // Write the program that inputs age from user and print older when the age is greater or 
+    //  equal to 60, print adult when the age is greater or equal to 18 and print child when the age is less than 18.
+
+    if (age >= 18 && age <= 60) { alert(`adult`) }
+    if (age >= 60) { alert(`older`) }
+    if (age < 18) { alert(`child`) }
+    // Write the program that inputs a number from the user to calculate square root of that 
+    //  number and square root of the 0 cannot be calculated.
+    var number = +prompt(`write a number`)
+    if (number == 0) { alert(`no squar root`) }
+
+    else {
+        var ans = Math.sqrt(number)
+        alert(`squar root=${ans}`)
+    }
+    // Write the program that inputs a number and power from the user and calculate
+    //  the answer of number raised to the power of that power taht is input by the user.
+    var number = +prompt(`write a number`)
+    var power = +prompt(`write the power of number`)
+    var ans = Math.pow(number, power)
+    alert(`squar of number=${ans}`)
+    // write a program that assigning grades (A, B, C) based on the percentage obtained by a student.
+
+    // if the percentage is above 90, assign grade A
+    // if the percentage is above 75, assign grade B
+    // if the percentage is above 65, assign grade C
+    var percentage = +prompt(`write the percentage`)
+    if (percentage > 90) { console.log(`grade A`) }
+    else if (percentage > 75) { console.log(`grade B`) }
+    else if (percentage > 60) { console.log(`grade C`) }
+    // write a program that inputs 5 numbers and find greatest number using nested if statement.
+    var a = +prompt("enter  number")
+    var b = +prompt("enter  number")
+    var c = +prompt("enter  number")
+    var d = +prompt("enter  number")
+    var e = +prompt("enter  number")
+    if (a > b && a > c && a > d && a > e) { alert(`${a} is greater`) }
+    else {
+        if (b > c && b > d && b > e) { aler(`${b} is greater`) }
+        else {
+            if (c > d && c > e) { alert(`${c} is greater`) }
+            else {
+                if (d > e) { alert(`${d} is greater`) }
+                else {
+                    alert(`${e} is greater`)
+                }
+            }
+        }
+    }
+    //  Write a program to test whether a given number is odd or even using a simple ‘if’ structure.
+    // ?if Number is Even Multiply that number with 5 and show the result and if the number is odd than subtract 5 from that number and show the answer
+
+    var number = +prompt(`write a number`)
+    if (number % 2 == 0) { console.log(`${number * 5}`) }
+    else { console.log(number - 5) }
+    // Write a program that inputs an integer number and tests whether the number is divisible by 5 and 2 or not, using simple ‘if’ structure.
+    var number = +prompt(`write a number`)
+    if (number % 5 == 0 || number % 2 == 0) { alert(`divisible`) }
+    else { alert(`not`) }
+    // Write a program that inputs two numbers and finds out whether the second number is square of the first number.
+    //  Use simple if statement
+    var first_no = +prompt(`write a number`)
+    var second_no = +prompt(`write a number`)
+    var ans = first_no * first_no
+    if (second_no == ans) { alert(`yes`) }
+    else { alert(`no`) }
+    // Write a program that inputs salary and scale. It adds 40% of salary as increment if scale is greater than 16. Otherwise,
+    //  it adds 50% of the salary as increment. The program displays the net pay.
+    var salary = +prompt(`put the salary`)
+    var scale = +prompt(`put the scale`)
+    if (scale >= 16) {
+        increment = salary / 100 * 40
+        alert(`net pay=${increment + salary}`)
+    }
+    else {
+        increment = salary / 100 * 50
+        alert(`net pay=${increment + salary}`)
+    }
+    // Write a program that inputs two numbers and determines/tests
+    //  whether the first number is a multiple of second number, using if-else statement
+    var first_no = +prompt(`enter first value`)
+    var second_no = +prompt(`enter second value`)
+    if (second_no % first_no == 0) { alert(`yes fiest number is multiple of second number`) }
+    else { alert(`no`) }
+    // Write a program that finds out the grade of a student based on the average marks obtained in three subjects. The grade is calculated as;
+    //	If  average is greater than 80, grade is A.
+    //	If  average is less than 80 and greater than 60, grade is B.
+    //	If  average is less than 60 and greater than 33, grade is C.
+    //	If  average is less than 33, grade is F.
+    var avg_marks = +prompt(`put average marks`)
+    if (avg_marks > 80) { alert(`A`) }
+    if (avg_marks <= 80 && avg_marks > 60) { alert(`B`) }
+    if (avg_marks <= 60 && avg_marks > 33) { alert(`C`) }
+    if (avg_marks <= 33) { alert(`F`) }
+    // Write a program that performs simple arithmetic calculations using ‘nested if-else’ structure.
+    // 
+    //Write a program that inputs the current reading and previous reading of electric meter. It finds out the total units consumed using nested ‘if-else’ structure and computes the electricity bill as follows:
+    //	If units consumed are less than or equal to 300, then rate of electricity is Rs.12 per unit.
+    //	If units consumed are more than 300 and less than or equal to 400, then rate of electricity is Rs.14 per unit.
+    //	If units consumed are more than 400, then rate of electricity is Rs.20 per unit.
+    var crt = +prompt(`put current reading`)
+    var pre = +prompt(`put previous reading`)
+    var used_units = crt - pre
+    if (used_units <= 300) { alert(`rate Rs.12`) }
+    else {
+        if (used_units > 300 && used_units <= 400) { alert(`rate Rs.14`) }
+        else { alert(`rate Rs.20`) }
+    }
+    // Write a program that inputs salary and computes the net salary. If the salary is 30000 or more, 
+    // it deducts 13% of the salary. If the salary is 15000 or more but less than 30000, it deducts 1500 from the salary.
+
+    var salary = +prompt(`put the salary`)
+
+    if (salary >= 15000 && salary <= 30000) {
+
+
+
+        var sal = salary - 1500
+        alert(`net salary=${sal}`)
+
+    }
+    else {
+        var deducted_amount = salary / 100 * 13
+        alert(`net salary=${salary - deducted_amount}`)
+    }
+    // Write a program that inputs any character through keyboard and determines whether it is a capital letter, small letter,
+    //  a digit or a special symbol using logical operators and ‘if-else-if’ structure.
+    var char = prompt(`write a char`)
+    if (char >= 'a' && char <= 'z') { alert(`smaller`) }
+    else {
+        if (char >= `A` && char <= `Z`) { alert(`capital`) }
+        else { alert(`special symbol`) }
+    }
+    // Write a temperature conversion program that gives the user the options for converting
+    // the Fahrenheit to Celsius or Celsius to Fahrenheit using “switch” statement. Then carry out the conversion. Interaction of the program might look like:
+    //1- To convert Fahrenheit to Celsius
+    //2- To convert Celsius to Fahrenheit 
+    //Enter Option ?
+    // c = 5.0/9.0*(f-32);
+    // f = 9.0/5.0*c+32;
+    var temp = +prompt(`put temprature`)
+    var options = +prompt(` put 1 or 2 respactivly for "C" and "F"`)
+    if (options == 1) {
+        var ans = 5 / 9 * (temp - 32)
+        alert(`temprature is ${ans} C`)
+
+    }
+    else if (options == 2) {
+        var ans = 9 / 5 * temp + 32
+        alert(`temprature is ${ans} F`)
+    }
+    // --------------or--------------
+    var temp = +prompt(`put temprature`)
+
+    alert(`1-cel to far=${9 / 5 * temp + 32} F
+2-far to cel=${5 / 9 * (temp - 32)} C`)
+    // Write a program that take day number as input from the user and display the day name.
+    var num = +prompt(`put a number`)
+    if (num == 1) { alert(`monday`) }
+    else {
+        if (num == 2) { alert(`tuesday`) }
+        else {
+            if (num == 3) { alert(`wednesday`) }
+            else {
+                if (num == 4) { alert(`thursday`) }
+                else {
+                    if (num == 5) { alert(`friday`) }
+                    else {
+                        if (num == 6) { alert(`saturdy`) }
+                        else {
+                            if (num == 0) { alert(`sunday`) }
+                            else { none }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Write a program that take month number as input from the user and display the month name.
+    var num = +prompt(`put a number`)
+    if (num == 1) { alert(`january`) }
+    else {
+        if (num == 2) { alert(`february`) }
+        else {
+            if (num == 3) { alert(`march`) }
+            else {
+                if (num == 4) { alert(`april`) }
+                else {
+                    if (num == 5) { alert(`may`) }
+                    else {
+                        if (num == 6) { alert(`june`) }
+                        else {
+                            if (num == 7) { alert(`july`) }
+                            else {
+                                if (num == 8) { alert(`august`) }
+                                else {
+                                    if (num == 9) { alert(`september`) }
+                                    else {
+                                        if (num == 10) { alert(`october`) }
+                                        else {
+                                            if (num == 11) { alert(`november`) }
+                                            else {
+                                                if (num == 12) { alert(`december`) }
+                                                else { none }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Write a program that take day number as input from the user and display the day name using switch cases.
+    var num = +prompt(`put a number`)
+    switch (num) {
+        case 1: alert(`monday`)
+            break
+        case 2: alert(`tuesday`)
+            break
+        case 3: alert(`wednesday`)
+            break
+        case 4: alert(`thursday`)
+            break
+        case 5: alert(`friday`)
+            break
+        case 6: alert(`saturday`)
+            break
+        case 0: alert(`sunday`)
+            break
+        default: alert(`none`)
+    }
+    // Write a program that  make a simple calculator using switch cases.
+    var a = +prompt(`put first number`)
+    var opt = prompt(`+,-,/,*,%`)
+    var b = +prompt(`put second number`)
+    switch (opt) {
+        case `+`: alert(`${a + b}`)
+            break
+        case `-`: alert(`${a - b}`)
+            break
+        case `*`: alert(`${a * b}`)
+            break
+        case `/`: alert(`${a / b}`)
+            break
+        case `%`: alert(`${a % b}`)
+            break
+        default: alert(`insufficent entry`)
+    }
+    // Write a program that take month number as input from the user and display the month name using switch cases.
+    var num = +prompt(`put a number`)
+    switch (num) {
+        case 1: alert(`jan`)
+            break
+        case 2: alert(`feb`)
+            break
+        case 3: alert(`mar`)
+            break
+        case 4: alert(`apr`)
+            break
+        case 5: alert(`may`)
+            break
+        case 6: alert(`jun`)
+            break
+        case 7: alert(`jul`)
+            break
+        case 8: alert(`aug`)
+            break
+        case 9: alert(`sep`)
+            break
+        case 10: alert(`oct`)
+            break
+        case 11: alert(`nov`)
+            break
+        case 12: alert(`dec`)
+            break
+        default: alert(`none`)
+    }
+    //  8th-program write a program that print the product of all odd number from 1 to 50 by using while && do-while && for loop.
+
+    var i
+    var product = 1
+    for (i = 1; i <= 50; i += 2) {
+        product = product * i
+    }
+    console.log(product)
+    // write a program user put a number print all divisiables of that number 
+    var num = +prompt(`put a number`)
+    var i
+    for (i = 1; i < num / 2; i++) {
+        if (num % i == 0)
+            console.log(i)
+    }
+
+    // 7th-program Write a program that show the sum of even number and Odd Number in user User given
+    //  range of start and End by using while && do-while && for loop
+    var a = +prompt(`put intial number`)
+    var b = +prompt(`put ending number`)
+    var sum_of_even = 0
+    var sum_of_odd = 0
+    for (i = a; i <= b; i++) {
+        if (i % 2 == 0) {
+            sum_of_even = sum_of_even + i
+        }
+        else if (i % 2 == 1) {
+            sum_of_odd = sum_of_odd + i
+        }
+
+
+
+    }
+
+    console.log(sum_of_even)
+    //  write a program that print 1st 5 numbers along their square by using while && do-while && for loop.
+    var i
+    for (i = 1; i <= 5; i++)
+        console.log(i, i * i)
+    // write a program that print product of 1st 5 odd numbers by using while && do-while && for loop
+    var i
+    var product = 1
+    for (i = 1; i <= 10; i += 2) {
+        product = product * i
+    }
+    console.log(product)
+    // 3rd-program write a program that construct the table of the number that is input by the user by using all looping structure. 
+    var num = +prompt(`put a number`)
+    var i
+    for (i = 1; i <= 10; i++)
+        console.log(`${num} x ${i} = ${num * i}`)
+    // 5th-program write a program that calculate the factorial of the number by using while && do-while && for loop. 
+    var num = +prompt(`put a number`)
+    var product = 1
+    for (i = num; i > 0; i--) {
+        product = product * i
+    }
+    console.log(product)
+    // ========or========
+    var num = +prompt(`put a number`)
+    var product = 1
+    for (i = 1; i <= num; i++) {
+        product = product * i
+    }
+    console.log(product)
+    // #####
+    // #111#
+    // #111#
+    // #111#
+    // #####
+    var i
+    var j
+    for (i = 1; i <= 5; i++) {
+
+        for (j = 1; j <= 5; j++) {
+            if (i == 2 && j == 2 || i == 2 && j == 3 || i == 2 && j == 4) { document.write(`1`) }
+            else if (i == 3 && j == 2 || i == 3 && j == 3 || i == 3 && j == 4) { document.write(`1`) }
+            else if (i == 4 && j == 2 || i == 4 && j == 3 || i == 4 && j == 4) { document.write(`1`) }
+            else { document.write(`#`) }
+        }
+        document.write(`<br>`)
+    }
+    // 11 12 13 14 15 
+    //  21 22 23 24 25 
+    //  31 32 33 34 35 
+    //  41 42 43 44 45 
+    //  51 52 53 54 55 
+    var i
+    var j
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 5; j++) {
+            document.write(i, j)
+            document.write(`&nbsp`)
+        }
+        document.write(`<br>`)
+    }
+    // *****
+    // *   *
+    // *   *
+    // *   *
+    // *****
+    var i
+    var j
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 5; j++) {
+            if (i > 1 && i < 5 && j > 1 && j < 5) {
+                document.write('&nbsp&nbsp')
+
+            }
+            else {
+
+                document.write('*')
+
+            }
+        }
+        document.write('<br>')
+    }
+    //1st write a function that print 1st five natural numbers with their square.
+    function squr() {
+        for (i = 1; i <= 5; i++) {
+            sqr = i * i
+            console.log(sqr)
+        }
+    }
+    // ========or=======
+    function squr() {
+        for (i = 1; i <= 5; i++) {
+            sqr = Math.pow(i, 2)
+            console.log(sqr)
+        }
+    }
+    //2nd write a function that print the product of 1st 10 odd natural numbers .
+    function num() {
+        sum = 0
+        for (i = 0; i <= 10; i += 2) {
+            sum = sum + i
+
+        }
+        console.log(sum)
+    }
+    // 3rd write a function that construct the table of the number that is input by the user.
+
+    function table() {
+        var z = +prompt(`put a number`)
+        for (i = 1; i <= 10; i++) {
+            console.log(`${z} x ${i} = ${z * i}`)
+        }
+    }
+    //th write a funtion that find prime number or not prime.
+    function prime() {
+        var num = +prompt(`put a number`)
+        var check = 0
+        for (i = 1; i < num; i++) {
+            if (num % i == 0) { check++ }
+            if (check == 0) {
+                console.log(`prime`)
+            }
+            else {
+                console.log(`not prime`)
+            }
+        }
+    }
+    // 5th write function that calculate the factorial of the number. 
+    function factorial() {
+
+        var num = +prompt(`put a number`)
+        var product = 1
+        for (i = 1; i <= num; i++) {
+            product = product * i
+        }
+        console.log(product)
+    }
+    // 6th-program Write a function that print the sum of this series 1+1/2+1/4+1/6.......1/100
+    function sequence() {
+        var sum = 1
+        for (i = 2; i <= 100; i += 2) {
+            sum = sum + 1 / i
+
+        }
+        console.log(sum)
+    }
+    // 7th-program Write a function that show the sum of even number and Odd Number in user User given range of start and End.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    1. //program 1st: Write a program that inputs two numbers and passes these numbers to a function, 
+    //  The function finds the greatest number and displays the result.
+    function greatestnumber(a, b) {
+
+        if (a > b) { return a }
+        else { return b }
+
+
+    }
+    greatestnumber()
+    .2 // Write a program that accepts two integer values and passes these values to a function by parameter. 
+    // The function swaps/exchanges these values. The swapped / exchanged values should be displayed in the calling function.
+    function swp(a, b) {
+
+        var c
+        c = a
+        a = b
+        b = c
+        return { a, b }
+    }
+    swp()
+
+    3. // program 3rd: Write a function GCD that has two input parameters and returns the greatest common divisor 
+    // of the two numbers passed to it. Write a program that inputs two numbers and calls the function GCD to 
+    // compute the greatest common divisor of the numbers entered
+    function GCD(a, b) {
+        var i
+        for (i = 1; i <= a && i <= b; i++) {
+            if (a % i == 0 && b % i == 0) {
+                var ans = i
+
+            }
+
+        }
+        return (ans)
+
+    }
+    GCD()
+    4. //program 4th: Write a program by defining a function “qualitypoints” that takes average marks of a student and returns the value as: 
+    // 4 if average is between 90 and 100. 
+    // 3 if average is between 70 and 89.
+    // 2 if average is between 50 and 69.
+    // 1 if average is between 40 and 49.
+    // 0 if average is lower than 40.
+    function avg(a) {
+        if (a >= 90 && a <= 100) { return (4) }
+        else {
+            if (a >= 70 && a <= 89) { return (3) }
+            else {
+                if (a >= 50 && a <= 69) { return (2) }
+                else {
+                    if (a >= 40 && a <= 49) { return (1) }
+                    else { return (0) }
+                }
+            }
+        }
+    }
+    avg(90)
+    5. //program 5th: Write a program that inputs base and height of a triangle and calculates the area of that triangle by passing 
+    // base and height as parameters to a function.
+    function area(a, b) {
+        ans = 1 / 2 * a * b
+        return (ans)
+
+    }
+    area()
+    // 6th: Write a program that inputs two numbers and then prompts the user to enter his/her choice. 
+    // If the user enters 1, the numbers are added, for the choice of 2, the numbers are subtracted,
+    // for the choice of 3, the numbers are multiplied, for the choice of 4, the numbers are divided
+    function check(a, b) {
+        var num = +prompt(`enter your desire number`)
+        switch (num) {
+            case 1: return (a + b)
+                break;
+            case 2: return (a - b)
+                break;
+            case 3: return (a * b)
+                break;
+            case 4: return (a / b)
+                break;
+
+        }
+
+    }
+    check()
+    //  7th: Write a program by defining an inline function “circle_area” that takes the radius of a circle and 
+    // returns the calculated area of the circle.
+    function area(a) {
+        sum = 22 / 7 * a * a
+        return (sum)
+    }
+    area()
+    // 8.  write a function to calculate temprature in celcious(pass temprature in F by argument parameter.)
+    function temp(a) {
+        ans = 5 / 9 * (a - 32)
+        return (ans)
+    }
+    temp()
+    9. // write a function that takes two numbers from user as parameter if numbers are same it return cool // and otherwise it return bad.
+    function check(a, b) {
+        if (a == b) {
+            return (`cool`)
+        }
+        else { return (`bad`) }
+    }
+    check()
+    10. // write a JS function that takes year as parameter and return either it is leap year or not.
+    function leapyear(a) {
+        if (a % 4 == 0) { return (`leap`) }
+        else { return (`not`) }
+    }
+    leapyear()
+    11. // write a function that takes a rendom number b/w 1 to 10 as parameter and then input a number from user
+    // if number is matched return you are awesom oterwise it return try again.
+    function match(a) {
+        var b = +prompt(`put your desired number`)
+        if (a == b) { return (`awesom`) }
+        else { return (`try again`) }
+    }
+    match()
+    // find greater number in a arry
+    const num = [25, 33, 55, 99, 25, 66, 23, 85, 103]
+    let max = num[0]
+    for (i = 1; i <= num.length; i++) {
+        if (max < num[i]) {
+            max = num[i]
+
+        }
+
+
+    }
+    console.log(max)
+    //   ===or====
+    var ary=[1,2,3,4,5,6,7,8]
+var maxnumber=0
+for(var x of ary){
+    if(maxnumber < [x] ){
+        maxnumber = [x]
+    }
+    
+}
+console.log(maxnumber)
+   
+
+    // find sum of arry 
+    const num = [25, 33, 55, 69, 55, 98]
+    var sum = 0
+    for (i = 0; i <= num.length - 1; i++) {
+        sum = sum + num[i]
+
+
+    }
+
+    console.log(sum)
+    // find even number in arry
+    const num = [2, 4, 6, 33, 55, 69, 55, 98]
+
+    for (i = 0; i < num.length; i++) {
+
+        if (num[i] % 2 == 0) {
+            console.log(num[i])
+        }
+
+    }
+    // find odd number in arry
+    const num = [2, 4, 6, 33, 55, 69, 55, 98]
+
+    for (i = 0; i < num.length; i++) {
+
+        if (num[i] % 2 !== 0) {
+            console.log(num[i])
+        }
+
+    }
+    // find sum of odd numbers in arry
+    const num = [2, 4, 6, 33, 55, 69, 55, 98]
+    var sum = 0
+    for (i = 0; i < num.length; i++) {
+
+        if (num[i] % 2 !== 0) {
+            sum = sum + num[i]
+        }
+
+    }
+    console.log(sum)
+    // find sum of even numbers in arry
+    const num = [2, 4, 6, 33, 55, 69, 55, 98]
+    let sum = 0
+    for (i = 0; i < num.length; i++) {
+
+        if (num[i] % 2 == 0) {
+            sum = sum + num[i]
+        }
+
+    }
+    console.log(sum)
+    // write a function which return thr sum of number like 123 // 1+2+3=6
+    function sumOfNumber(num) {
+        var num1 = num.toString().split("").map(Number)
+        var sum = 0
+        for (i = 0; i < num1.length; i++) {
+            sum = sum + num1[i]
+        }
+        return (sum)
+    }
+    sumOfNumber()
+    // ===================================DOM=====================================
+    </script>
+
+</body>
+
+
+
+    
+
+</html>
